@@ -1,0 +1,69 @@
+import React from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+const Home: React.FC = () => {
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="bg-light-blue section-padding">
+        <Container>
+          <Row className="align-items-center">
+            <Col lg={6}>
+              <h1 className="display-4 text-primary-blue mb-4">
+                Trusted Legal Excellence
+              </h1>
+              <p className="lead mb-4">
+                Date Joshi & Associates is a premier law firm committed to providing 
+                comprehensive legal solutions with integrity, expertise, and dedication. 
+                Our experienced team of legal professionals ensures that your legal needs 
+                are met with the highest standards of service.
+              </p>
+              <div className="d-flex gap-3">
+                <Button as={Link} to="/about" variant="primary" size="lg">
+                  Learn More About Us
+                </Button>
+                <Button as={Link} to="/contact" variant="outline-primary" size="lg">
+                  Get Consultation
+                </Button>
+              </div>
+            </Col>
+            <Col lg={6}>
+              <div className="text-center">
+                <div className="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center" 
+                     style={{width: '300px', height: '300px'}}>
+                  <h2 className="text-white mb-0">Legal Excellence</h2>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* About Section */}
+      <section className="section-padding">
+        <Container>
+          <Row>
+            <Col lg={8} className="mx-auto text-center">
+              <h2>About Our Firm</h2>
+              <p className="lead">
+                With years of combined experience, Date Joshi & Associates has established 
+                itself as a leading law firm specializing in various areas of law. Our firm 
+                is built on the foundation of trust, professionalism, and unwavering commitment 
+                to our clients' success.
+              </p>
+              <p>
+                We understand that legal matters can be complex and overwhelming. That's why 
+                our team of skilled attorneys works closely with each client to provide 
+                personalized legal strategies that deliver results. From corporate law to 
+                litigation, we have the expertise to handle your most challenging legal issues.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </>
+  );
+};
+
+export default Home;

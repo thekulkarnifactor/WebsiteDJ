@@ -1,0 +1,154 @@
+:root {
+    --primary-blue: #1e3a8a;
+    --medium-blue: #3b82f6;
+    --light-blue: #dbeafe;
+    --white: #ffffff;
+    --gray: #6b7280;
+    --dark-gray: #374151;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Georgia', serif;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    line-height: 1.6;
+  }
+  
+  .App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  /* Common Button Styles */
+  .btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--medium-blue);
+    border-color: var(--medium-blue);
+    transform: translateY(-2px);
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .section-padding {
+    padding: 80px 0;
+  }
+  
+  .text-primary-blue {
+    color: var(--primary-blue);
+  }
+  
+  .bg-light-blue {
+    background-color: var(--light-blue);
+  }
+  
+  /* Card Styles */
+  .team-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .practice-area-card {
+    border: 1px solid var(--light-blue);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  .practice-area-header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .practice-area-header:hover {
+    background-color: var(--medium-blue);
+  }
+  
+  .practice-area-content {
+    padding: 20px;
+    background-color: var(--white);
+  }
+  
+  /* Article Styles */
+  .article-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+  }
+  
+  .article-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Form Styles */
+  .form-control {
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 12px 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
+  }
+  
+  /* Map Container */
+  .map-container {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .section-padding {
+      padding: 40px 0;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
