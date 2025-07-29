@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Disclaimer from './components/Disclaimer';
@@ -11,29 +8,15 @@ import About from './pages/About';
 import PracticeAreas from './pages/PracticeAreas';
 import Articles from './pages/Articles';
 import Contact from './pages/Contact';
+import { useFavicon } from './hooks/useFavicon'; // Import the hook
 
 function App() {
-  const [showDisclaimer, setShowDisclaimer] = useState(true);
-
-  useEffect(() => {
-    const accepted = localStorage.getItem('disclaimerAccepted');
-    if (accepted === 'true') {
-      setShowDisclaimer(false);
-    }
-  }, []);
-
-  const handleDisclaimerAccept = () => {
-    localStorage.setItem('disclaimerAccepted', 'true');
-    setShowDisclaimer(false);
-  };
-
-  if (showDisclaimer) {
-    return <Disclaimer onAccept={handleDisclaimerAccept} />;
-  }
+  useFavicon(); // Use the favicon hook
 
   return (
     <Router>
       <div className="App">
+        <Disclaimer />
         <Header />
         <main>
           <Routes>

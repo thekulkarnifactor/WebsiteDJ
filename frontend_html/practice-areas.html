@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Practice Areas - Date Joshi & Associates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        function toggleArea(id) {
+            const content = document.getElementById(id);
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+            } else {
+                content.classList.add('active');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Date Joshi & Associates</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="practice-areas.html" class="active">Practice Areas</a></li>
+                <li><a href="articles.html">Articles & Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Practice Areas</h1>
+        <p class="lead" style="margin-bottom: 40px;">
+            Comprehensive legal services across diverse practice areas
+        </p>
+
+        <div class="practice-area">
+            <div class="practice-area-header" onclick="toggleArea('area1')">
+                Corporate Law
+                <span id="icon1">▼</span>
+            </div>
+            <div class="practice-area-content" id="area1">
+                Comprehensive corporate legal services including company formation, governance, compliance, mergers and acquisitions, joint ventures, and corporate restructuring. Our team provides strategic legal advice to help businesses navigate complex corporate matters
+                and achieve their objectives while ensuring regulatory compliance.
+            </div>
+        </div>
+
+        <div class="practice-area">
+            <div class="practice-area-header" onclick="toggleArea('area2')">
+                Intellectual Property Rights
+                <span id="icon2">▼</span>
+            </div>
+            <div class="practice-area-content" id="area2">
+                Protection and enforcement of intellectual property assets including patents, trademarks, copyrights, and trade secrets. We assist clients in IP registration, licensing agreements, infringement disputes, and developing comprehensive IP strategies to safeguard
+                their innovations and creative works.
+            </div>
+        </div>
+
+        <div class="practice-area">
+            <div class="practice-area-header" onclick="toggleArea('area3')">
+                Employment Law
+                <span id="icon3">▼</span>
+            </div>
+            <div class="practice-area-content" id="area3">
+                Complete employment law solutions covering employment contracts, workplace policies, labor disputes, employee rights, termination procedures, and compliance with labor regulations. We represent both employers and employees in various employment-related
+                matters and disputes.
+            </div>
+        </div>
+
+        <div class="practice-area">
+            <div class="practice-area-header" onclick="toggleArea('area4')">
+                Civil Litigation
+                <span id="icon4">▼</span>
+            </div>
+            <div class="practice-area-content" id="area4">
+                Skilled representation in civil litigation matters including contract disputes, property disputes, personal injury claims, commercial litigation, and appellate proceedings. Our litigation team combines extensive courtroom experience with strategic thinking
+                to achieve favorable outcomes for our clients.
+            </div>
+        </div>
+
+        <div class="practice-area">
+            <div class="practice-area-header" onclick="toggleArea('area5')">
+                Real Estate Law
+                <span id="icon5">▼</span>
+            </div>
+            <div class="practice-area-content" id="area5">
+                Comprehensive real estate legal services including property transactions, due diligence, title verification, lease agreements, property disputes, zoning issues, and real estate development matters. We ensure smooth property transactions while protecting
+                our clients' interests throughout the process.
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2024 Date Joshi & Associates. All rights reserved. | <a href="terms.html" style="color:white;">Terms of Use</a> | <a href="privacy.html" style="color:white;">Privacy Policy</a>
+    </footer>
+</body>
+
+</html>

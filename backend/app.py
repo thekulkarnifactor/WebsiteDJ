@@ -1,13 +1,13 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from flask_mail import Flask_Mail, Message
+from flask_mail import Mail, Message
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=['http://localhost:3000'])
 
 # Email configuration
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -16,18 +16,19 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = os.getenv('EMAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.getenv('EMAIL_PASSWORD')
 
-mail = Flask_Mail(app)
+mail = Mail(app)
 
 @app.route('/api/contact', methods=['POST'])
 def contact():
     try:
+        print("mail: ", app.config['MAIL_USERNAME'])
         data = request.get_json()
         
         # Create email message
         msg = Message(
             subject=f"Contact Form: {data['subject']}",
             sender=app.config['MAIL_USERNAME'],
-            recipients=['contact@datejoshiassociates.com']  # Replace with actual email
+            recipients=['harishkulkarni0101@gmail.com']  # Replace with actual email
         )
         
         msg.body = f"""
@@ -41,9 +42,11 @@ def contact():
         """
         
         mail.send(msg)
+        print("Email sent successfully")
         return jsonify({'success': True, 'message': 'Message sent successfully'})
     
     except Exception as e:
+        print("Email failed successfully")
         return jsonify({'success': False, 'message': 'Failed to send message'}), 500
 
 @app.route('/api/articles', methods=['GET'])
