@@ -196,15 +196,16 @@ const Contact = () => {
           }}>
             <div>
               <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>Office Address</h4>
-              <p>12-A, Deccan Gymkhana<br />Pune, Maharashtra 411004<br />India</p>
+              <p>759/12A Deccan Gymkhana<br />Pune, Maharashtra 411004<br />India</p>
             </div>
             <div>
               <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>Phone</h4>
-              <p>+91 20 1234 5678<br />+91 98765 43210</p>
+              <p>Pratik Date: +91 94230 76884</p>
+              <p>Dhananjay Joshi: +91 96234 52565</p>
             </div>
             <div>
               <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>Email</h4>
-              <p>info@datejoshi.com<br />contact@datejoshi.com</p>
+              <p>info@datejoshiandassociates.com</p>
             </div>
           </div>
         </div>
