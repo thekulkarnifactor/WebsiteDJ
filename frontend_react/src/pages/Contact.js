@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { contactAPI } from '../services/api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -46,7 +47,7 @@ const Contact = () => {
 
     try {
       // Here you would make the API call to your backend
-      // const response = await contactAPI.sendMessage(formData);
+      const response = await contactAPI.sendMessage(formData);
       setStatus('Message sent successfully! We will get back to you soon.');
       setFormData({ name: '', email: '', phone: '', subject: '', message: '', captcha: '' });
       generateCaptcha();
@@ -170,22 +171,22 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Map Section */}
+          {/* Updated Map Section - New Location: Deccan Gymkhana, Pune */}
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.9847469934823!2d72.8148207!3d19.0354103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b4b5a7c7c7%3A0x4b5a7c7c7c7c7c7c!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1234567890123"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2613183984997!2d73.8464064153442!3d18.51665558740895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfdf3b1c4e4b%3A0x4b1c4e4b4e4b4e4b!2sDeccan%20Gymkhana%2C%20Pune%2C%20Maharashtra%20411004!5e0!3m2!1sen!2sin!4v1640995200000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Office Location"
+              title="Office Location - Deccan Gymkhana, Pune"
             ></iframe>
           </div>
         </div>
 
-        {/* Contact Information */}
+        {/* Updated Contact Information */}
         <div style={{ marginTop: '3rem', textAlign: 'center' }}>
           <div style={{ 
             display: 'grid', 
@@ -195,11 +196,11 @@ const Contact = () => {
           }}>
             <div>
               <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>Office Address</h4>
-              <p>123 Legal Plaza<br />Mumbai, Maharashtra 400001<br />India</p>
+              <p>12-A, Deccan Gymkhana<br />Pune, Maharashtra 411004<br />India</p>
             </div>
             <div>
               <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>Phone</h4>
-              <p>+91 22 1234 5678<br />+91 98765 43210</p>
+              <p>+91 20 1234 5678<br />+91 98765 43210</p>
             </div>
             <div>
               <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>Email</h4>

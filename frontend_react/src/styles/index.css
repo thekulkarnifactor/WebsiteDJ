@@ -446,16 +446,29 @@ footer {
     margin-bottom: 1rem;
 }
 
-.footer-section p,
+.footer-section p {
+    margin-bottom: 0.7rem;
+    /* Increased from 0.5rem for better readability */
+    line-height: 1.6;
+    /* Better line spacing within paragraphs */
+    color: var(--white);
+}
+
+
+/* Footer Links Styling */
+
 .footer-section a {
     color: var(--white);
+    /* Make links white */
     text-decoration: none;
     margin-bottom: 0.5rem;
     display: block;
+    transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
     color: var(--light-blue);
+    /* Light blue on hover */
 }
 
 .footer-bottom {
